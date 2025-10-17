@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Form Validation — Signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="form-wrapper">
+      <h1>Register</h1>
+      <p class="subtitle">Create your account — all fields are validated in real time.</p>
+
+      <form id="signup-form" novalidate>
+        <div class="form-control" id="name-control">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            autocomplete="name"
+            required
+          />
+          <small class="message"></small>
+        </div>
+
+        <div class="form-control" id="email-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <small class="message"></small>
+        </div>
+
+        <div class="form-control" id="password-control">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 6 characters"
+            autocomplete="new-password"
+            required
+          />
+          <small class="message"></small>
+        </div>
+
+        <div class="form-control" id="password2-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Repeat your password"
+            autocomplete="new-password"
+            required
+          />
+          <small class="message"></small>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+
+        <p id="form-success" class="form-success" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
